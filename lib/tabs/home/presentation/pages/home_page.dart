@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mess_food/core/widgets/menu_items.dart';
-import 'package:mess_food/features/home/presentation/widgets/navbar.dart';
-import 'package:mess_food/features/home/presentation/widgets/offer_list.dart';
+import 'package:mess_food/tabs/home/presentation/widgets/navbar.dart';
+import 'package:mess_food/tabs/home/presentation/widgets/offer_list.dart';
 import 'package:mess_food/features/recommanded/presentation/widgets/recommanded_menu.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final ScrollController scrollController;
+  const HomePage({super.key, required this.scrollController});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
+          controller: widget.scrollController,
           // Safe to use here now because there is no Expanded inside
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,6 +35,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: const Navbar(),
               ),
+
+              const SizedBox(height: 12),
 
               // 2. Menu Items (The Horizontal List)
               Padding(
@@ -56,10 +60,6 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 12), // Space between title and list
               const MenuItems(),
-
-              const SizedBox(height: 12),
-
-              SizedBox(height: 12),
 
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                     fontSize:
                         14, // Section headers in pro apps are often 14-16 but bold
                     fontWeight:
-                        FontWeight.w600, // Extra bold for that "Zomato" impact
+                        FontWeight.w500, // Extra bold for that "Zomato" impact
                     letterSpacing: 1, // This adds the "stretch" you asked for
                     color: const Color.fromARGB(
                       255,

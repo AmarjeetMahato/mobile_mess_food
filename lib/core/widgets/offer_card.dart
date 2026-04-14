@@ -128,7 +128,7 @@ class _OfferCardState extends State<OfferCard> {
                           vertical: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF006400),
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: const Row(
@@ -142,7 +142,7 @@ class _OfferCardState extends State<OfferCard> {
                             Text(
                               "4.5",
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
                               ),

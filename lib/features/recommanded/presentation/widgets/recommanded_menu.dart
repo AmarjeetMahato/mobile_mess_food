@@ -175,7 +175,7 @@ class _RecommendedMenuState extends State<RecommendedMenu>
                 ),
                 // 🍽️ Meta Info
                 Padding(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(14),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -187,10 +187,11 @@ class _RecommendedMenuState extends State<RecommendedMenu>
                           Expanded(
                             child: Text(
                               item['name'],
-                              style: GoogleFonts.montserrat(
-                                fontSize: 18,
+                              style: GoogleFonts.roboto(
+                                fontSize: 22,
                                 fontWeight: FontWeight.w800,
-                                color: const Color(0xFF1F2937),
+                                color: const Color(0xFF4B5563),
+                                letterSpacing: 1.2,
                               ),
                             ),
                           ),
@@ -260,18 +261,20 @@ class _RecommendedMenuState extends State<RecommendedMenu>
                             item['time'],
                             style: GoogleFonts.outfit(
                               fontWeight: FontWeight.w600,
+                              color: Colors.grey.shade600,
                             ),
                           ),
                           const SizedBox(width: 16),
-                          const Icon(
+                          Icon(
                             Icons.location_on_outlined,
                             size: 16,
-                            color: Colors.grey,
+                            color: Colors.grey.shade600,
                           ),
                           const SizedBox(width: 4),
                           Text(
                             item['distance'],
                             style: GoogleFonts.outfit(
+                              color: Colors.grey.shade600,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
