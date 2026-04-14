@@ -38,7 +38,11 @@ class _MenuItemsState extends State<MenuItems> {
               Navigator.pushNamed(
                 context,
                 '/category',
-                arguments: {'id': item.id, 'name': item.name},
+                arguments: {
+                  'id': item.id,
+                  'name': item.name,
+                  'image': item.image,
+                },
               );
             },
             child: Padding(

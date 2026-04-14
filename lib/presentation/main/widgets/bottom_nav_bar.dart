@@ -77,11 +77,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
               duration: const Duration(milliseconds: 800),
               curve: Curves.easeInOut,
               child: Container(
-                margin: const EdgeInsets.fromLTRB(24, 0, 24, 30),
-                padding: const EdgeInsets.symmetric(
-                  vertical: 8,
-                  horizontal: 12,
-                ),
+                margin: const EdgeInsets.fromLTRB(16, 0, 15, 15),
+                padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(35),
